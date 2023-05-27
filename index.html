@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/images/icon.png" type="image/png">
+  <title>CinePicks</title>
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/media_query.css">
+
+  <!--
+    - google font link
+  -->
+  <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+</head>
+
+<body>
+
+
+
+
+  <!--
+    - main container
+  -->
+  <div class="container">
+
+    <!--
+      - #HEADER SECTION
+    -->
+
+    <header class="">
+      <div class="navbar">
+
+        <!--
+          - menu button for small screen
+        -->
+        <button class="navbar-menu-btn">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+
+
+        <a href="#" class="navbar-brand" style="width: 150px !important;">
+          <!-- <div class="logo">
+            <div class="container">
+              <p>Cine<span>Picks</span></p>
+            </div>
+          </div> -->
+          <img src="./assets/images/CinePicks.png" alt="">
+        </a>
+
+        <!--
+          - navbar navigation
+        -->
+
+        <nav class="">
+          <ul class="navbar-nav">
+
+            <li> <a href="#" class="navbar-link">Home</a> </li>
+            <li> <a href="#" class="navbar-link">Watchlist</a> </li>
+            <li> <a href="#" class="navbar-link">Seen</a> </li>
+            <li> <a href="#" class="navbar-link">Liked</a> </li>
+            <li> <a href="#" class="navbar-link">Recommended</a> </li>
+            <li> <a href="#" class="navbar-link  indicator">Society</a> </li>
+
+          </ul>
+        </nav>
+
+        <!--
+          - search and sign-in
+        -->
+
+        <div class="navbar-actions">
+
+          <div class="navbar-form">
+            <input type="text" name="search" id="navbar-form-search" placeholder="I'm looking for..."
+            class="navbar-form-search" onkeyup="findMovies()" onclick = "findMovies()">
+            <div class="search-list" id="search-list">
+
+              <!-- <div class="search-list-item">
+                <div class="search-item-thumbnail">
+                  <img src="assets/images/movies/captain-marvel.jpg" >
+                </div>
+                <div class="search-item-info">
+                  <h3>Name of movie</h3>
+                  <p>2020</p>
+                </div>
+              </div>
+              <div class="search-list-item">
+                <div class="search-item-thumbnail">
+                  <img src="assets/images/movies/captain-marvel.jpg" >
+                </div>
+                <div class="search-item-info">
+                  <h3>Name of movie</h3>
+                  <p>2020</p>
+                </div>
+              </div>
+              <div class="search-list-item">
+                <div class="search-item-thumbnail">
+                  <img src="assets/images/movies/captain-marvel.jpg" >
+                </div>
+                <div class="search-item-info">
+                  <h3>Name of movie</h3>
+                  <p>2020</p>
+                </div>
+              </div>
+              <div class="search-list-item">
+                <div class="search-item-thumbnail">
+                  <img src="assets/images/movies/captain-marvel.jpg" >
+                </div>
+                <div class="search-item-info">
+                  <h3>Name of movie</h3>
+                  <p>2020</p>
+                </div>
+              </div>
+              <div class="search-list-item">
+                <div class="search-item-thumbnail">
+                  <img src="assets/images/movies/captain-marvel.jpg" >
+                </div>
+                <div class="search-item-info">
+                  <h3>Name of movie</h3>
+                  <p>2020</p>
+                </div>
+              </div>
+              <div class="search-list-item">
+                <div class="search-item-thumbnail">
+                  <img src="assets/images/movies/captain-marvel.jpg" >
+                </div>
+                <div class="search-item-info">
+                  <h3>Name of movie</h3>
+                  <p>2020</p>
+                </div>
+              </div>
+              <div class="search-list-item">
+                <div class="search-item-thumbnail">
+                  <img src="assets/images/movies/captain-marvel.jpg" >
+                </div>
+                <div class="search-item-info">
+                  <h3>Name of movie</h3>
+                  <p>2020</p>
+                </div>
+              </div>
+              <div class="search-list-item">
+                <div class="search-item-thumbnail">
+                  <img src="assets/images/movies/captain-marvel.jpg" >
+                </div>
+                <div class="search-item-info">
+                  <h3>Name of movie</h3>
+                  <p>2020</p>
+                </div>
+              </div>
+              <div class="search-list-item">
+                <div class="search-item-thumbnail">
+                  <img src="assets/images/movies/captain-marvel.jpg" >
+                </div>
+                <div class="search-item-info">
+                  <h3>Name of movie</h3>
+                  <p>2020</p>
+                </div>
+              </div>
+              <div class="search-list-item">
+                <div class="search-item-thumbnail">
+                  <img src="assets/images/movies/captain-marvel.jpg" >
+                </div>
+                <div class="search-item-info">
+                  <h3>Name of movie</h3>
+                  <p>2020</p>
+                </div>
+              </div>
+              <div class="search-list-item">
+                <div class="search-item-thumbnail">
+                  <img src="assets/images/movies/captain-marvel.jpg" >
+                </div>
+                <div class="search-item-info">
+                  <h3>Name of movie</h3>
+                  <p>2020</p>
+                </div>
+              </div> -->
+            
+            </div>
+
+            <button class="navbar-form-btn">
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+
+            <button class="navbar-form-close">
+              <ion-icon name="close-circle-outline"></ion-icon>
+            </button>
+          </div>
+
+
+          <!--
+            - search button for small screen
+          -->
+
+          <button class="navbar-search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+          <a href="#" class="navbar-signin">
+            <span>Sign in</span>
+            <ion-icon name="log-in-outline"></ion-icon>
+          </a>
+
+        </div>
+
+      </div>
+    </header>
+
+
+    <!--
+      - MAIN SECTION
+    -->
+    <main>
+
+      <!--#BANNER SECTION-->
+      <section class="banner">
+        <div class="banner-card" id="banner-card">
+          <!-- ::before -->
+          <img src="https://image.tmdb.org/t/p/original//vVpEOvdxVBP2aV166j5Xlvb5Cdc.jpg" class="banner-img" alt="">
+
+          <div class="card-content">
+
+            <ul class="card-info1">
+              <div class="card-info1-item">
+                <p class="item-name">Cast</p>
+                <p>Keanu Reeves, Halle Berry, Ian McShane, Laurence Fishburne, Mark Dacascos</p>
+              </div>
+              <div class="card-info1-item">
+                <p class="item-name">Directed By</p>
+                <p>Chad Stahelski</p>
+              </div>
+            </ul>
+
+            <p class="card-overview">
+              Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin’s guild, the High Table, John Wick is excommunicado, but the world's most ruthless hit men and women await his every turn.
+            </p>
+
+            <div class="card-info2">
+
+              <div class="genre">
+                <ion-icon name="film"></ion-icon>
+                <span>Action, Thriller, Crime</span>
+              </div>
+
+              <div class="year">
+                <ion-icon name="calendar"></ion-icon>
+                <span>2019-05-15</span>
+              </div>
+
+              <div class="duration">
+                <ion-icon name="time"></ion-icon>
+                <span>131min</span>
+              </div>
+
+              <div class="vote_average">
+                <ion-icon name="star-outline"></ion-icon>
+                7.447</div>
+
+            </div>
+
+            <h2 class="card-title">John Wick: Chapter 3 - Parabellum</h2>
+          </div>
+
+        </div>
+      </section>
+
+      <!--#MOVIES SECTION-->
+      <section class="movies">
+
+        <div class="rec-list">
+          <h3 class="title-large">
+            You May Also Like
+          </h3>
+          <div class="slider" id="rec-slider">
+            <!-- ::before -->
+
+            <!-- <div class="movie-card">
+              <div class="card-head">
+                <img src="./assets/images/movies/red-notice.jpg" alt="" class="card-img">
+                <div class="card-overlay">
+                  <div class="bookmark">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                  </div>
+                  <div class="rating">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>6.4</span>
+                  </div>
+                  <div class="play">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Red Notice</h3>
+                <div class="card-info">
+                  <span class="genre">Action/Comedy</span>
+                  <span class="year">2021</span>
+                </div>
+              </div>
+            </div>
+            <div class="movie-card">
+              <div class="card-head">
+                <img src="./assets/images/movies/red-notice.jpg" alt="" class="card-img">
+                <div class="card-overlay">
+                  <div class="bookmark">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                  </div>
+                  <div class="rating">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>6.4</span>
+                  </div>
+                  <div class="play">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Red Notice</h3>
+                <div class="card-info">
+                  <span class="genre">Action/Comedy</span>
+                  <span class="year">2021</span>
+                </div>
+              </div>
+            </div> -->
+          <!-- </div> -->
+        </div>
+
+        <div class="sim-list">
+          <h3 class="title-large">
+            Find Slimilar Movies
+          </h3>
+          <div class="slider" id="sim-slider">
+            <!-- <div class="movie-card">
+              <div class="card-head">
+                <img src="./assets/images/movies/red-notice.jpg" alt="" class="card-img">
+                <div class="card-overlay">
+                  <div class="bookmark">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                  </div>
+                  <div class="rating">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>6.4</span>
+                  </div>
+                  <div class="play">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Red Notice</h3>
+                <div class="card-info">
+                  <span class="genre">Action/Comedy</span>
+                  <span class="year">2021</span>
+                </div>
+              </div>
+            </div>
+            <div class="movie-card">
+              <div class="card-head">
+                <img src="./assets/images/movies/red-notice.jpg" alt="" class="card-img">
+                <div class="card-overlay">
+                  <div class="bookmark">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                  </div>
+                  <div class="rating">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>6.4</span>
+                  </div>
+                  <div class="play">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Red Notice</h3>
+                <div class="card-info">
+                  <span class="genre">Action/Comedy</span>
+                  <span class="year">2021</span>
+                </div>
+              </div>
+            </div> -->
+           </div>
+          </div>
+        </div>
+
+
+        <div class="filter-bar">
+
+          <div class="filter-radios">
+
+            <input type="radio" name="grade" id="top-rated">
+            <label for="top-rated">Top Rated</label>
+
+            <input type="radio" name="grade" id="popular">
+            <label for="popular">Popular</label>
+
+            <input type="radio" name="grade" id="now-playing">
+            <label for="now-playing">Now Playing</label>
+
+            <div class="checked-radio-bg"></div>
+
+          </div>
+
+        </div>
+
+        <!--
+          - movies grid
+        -->
+
+        <div class="movies-grid" id="movies-grid1">
+
+          <!-- <div class="movie-card">
+
+            <div class="card-head">
+              <img src="./assets/images/movies/red-notice.jpg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.4</span>
+                </div>
+
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Red Notice</h3>
+
+              <div class="card-info">
+                <span class="genre">Action/Comedy</span>
+                <span class="year">2021</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="./assets/images/movies/spider-men.jpg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.4</span>
+                </div>
+
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Spider-Man: Homecoming</h3>
+
+              <div class="card-info">
+                <span class="genre">Action/Adventure</span>
+                <span class="year">2017</span>
+              </div>
+            </div>
+
+          </div> -->
+
+        </div>
+
+        <!--
+          - load more button
+        -->
+        <button class="load-more" id="load-more1">LOAD MORE</button>
+
+
+        <div class="filter-bar">
+
+          <div class="filter-dropdowns">
+
+            <select name="genre" class="genre" id="genre">
+              <option value="all">All genres</option>
+              <option value="28">Action</option>
+              <option value="12">Adventure</option>
+              <option value="16">Animation</option>
+              <option value="35">Comedy</option>
+              <option value="80">Crime</option>
+              <option value="99">Documentary</option>
+              <option value="18">Drama</option>
+              <option value="10751">Family</option>
+              <option value="27">Horror</option>
+              <option value="9648">Mystery</option>
+              <option value="10749">Romance</option>
+              <option value="878">Science Fiction</option>
+              <option value="53">Thriller</option>
+              <option value="10752">War</option>
+            </select>
+
+            <select name="language" class="language" id="language">
+              <option value="all">All languages</option>
+              <option value="en">English</option>
+              <option value="zh">Chinese</option>
+              <option value="ko">Korean</option>
+              <option value="ja">Japanese</option>
+              <option value="es">Spanish</option>
+              <option value="fr">French</option>
+              <option value="ru">Russian</option>
+              <option value="it">Italian</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="movies-grid" id="movies-grid2">
+        <!-- 
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="./assets/images/movies/red-notice.jpg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.4</span>
+                </div>
+
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Red Notice</h3>
+
+              <div class="card-info">
+                <span class="genre">Action/Comedy</span>
+                <span class="year">2021</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="./assets/images/movies/spider-men.jpg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.4</span>
+                </div>
+
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Spider-Man: Homecoming</h3>
+
+              <div class="card-info">
+                <span class="genre">Action/Adventure</span>
+                <span class="year">2017</span>
+              </div>
+            </div>
+
+          </div> -->
+        </div>
+
+        <button class="load-more" id="load-more2">LOAD MORE</button>
+
+      </section>
+
+    </main>
+
+
+
+  </div>
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/main.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
